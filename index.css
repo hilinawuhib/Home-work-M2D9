@@ -101,7 +101,7 @@ th,td,tr{
     width: 100px;
     height: 40px;
     color: honeydew;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgb(65, 58, 58);
     box-shadow: 0 1px 2px rgba(211, 197, 197, 0.15);
     transition: all 0.3s ease-in-out;
