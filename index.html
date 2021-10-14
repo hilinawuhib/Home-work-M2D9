@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--
+IMPORTANT:
+Start from the previous Musical assignment project you've created on M2-D2
+    
+ASSIGNMENT RULES
+- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
+- To test the page, open it with your browser and inspect it with developer tools / device emulator.
+- Use Bootstrap4.6 classes to create the page.
+- Use containers, rows and cols in order to achieve a great responsive layout.
+
+NOTE:
+Most of the requirements in this exercises reference a bootstrap's functionality or component. 
+Make sure you check the documentation before creting anything custom.
+-->
+
+<html>
+
+<head>
+    <html lang="en">
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        
+            <title>music website</title>
+          </head>
+          <body>
+        
+            <!-- Optional JavaScript; choose one of the two! -->
+        
+            <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+            -->
+         
+    
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+
+ <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- EXERCISE 1
+        Create a Jumbotron section with a quick explanation / image of the website.
+        Make it appear with a fade-in animation effect when the page loads.
+    -->
+
+    <!-- EXERCISE 2
+        Use a Bootstrap Card to contain every album in the favorite list you previously created.
+        Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
+    -->
+
+    <!-- EXERCISE 3
+        Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
+    -->
+
+    <!-- EXERCISE 4
+        Create a new section with an album tracklist inside a Bootstrap table.
+        The row colors of the table must be alternated.
+
+        There should be a column for the track order number, one for the title and one for the track duration.
+        (If you want, you can also add extra columns)
+    -->
+
+    <!-- EXERCISE 5
+        Add a DELETE bootstrap button at the end of each row of the tracklist. 
+        Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
+
+        ## EXTRA CSS CHALLENGE ##
+        Make only one button visible at a time, for each row, when the single row gets hovered. 
+        Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
+    -->
+
+    <!-- EXERCISE 6
+        Add an "Add Track" button under the tracklist of the album. 
+        It should have a nice shadow transition when its hovered (with the box-shadow property) 
+        to look like as if the button was elevating itself.
+    -->
+
+    <!-- EXERCISE 7
+        On the click of "Add Track" button, a modal should appear.
+        (check in the documentation the modal + button example)
+        
+        The modal shall contain single input fields (avoid using a <form> to wrap the inputs) with:
+        - Track number
+        - Track title
+        - Track duration
+
+        The fields should be inside an Input Group and divided in 2 columns.
+    -->
+
+    <!-- ############### -->
+    <!-- ###  EXTRA  ### -->
+    <!-- ############### -->
+
+    <!-- EXERCISE 8
+        The modal should contain 2 buttons at the bottom:
+        - Add => Adds a new track in the tracklist with the data of the input fields.
+        - Close => closes the modal
+
+        https://getbootstrap.com/docs/4.6/components/alerts/
+        [EXTRA] Make the message disappear after 5 seconds
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+    -->
+
+    <!-- EXERCISE 9
+        Alert the user with a success message when the track gets added, or when a track gets deleted.
+     -->
+
+    <!-- EXERCISE 10
+        Considering the "Add Track" functionality that you've created on ex. 8: 
+         - The new list-element added to the list should appear with a fade-in effect
+     -->
+
+    <!-- EXERCISE 11
+        Considering the button you've created in ex. 5 that deletes the row:
+        Add a fade-out effect to the row before it gets removed, using a CSS transition effect
+    -->
+    <div class="boxcontainer">
+
+        <div class="container-fluid-nav text-center">
+            <nav class="navbar navbar-expand-lg">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIEnL1Pi-rPdTXJI4D3yD4TKlbvyoTr9NnDw&usqp=CAU"
+                alt=""
+                style="height: 100px; width: 150px; margin-right: 20px"
+              />
+              <a class="navbar-brand" href="#">My Favorite Beats</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#best-album-ever"> Favorite album</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#worst album">Worst album </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#tapestry"> Tapestry </a>
+                    </li>
+                  
+                  
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                     Genre
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">pop</a>
+                      <a class="dropdown-item" href="#">RNB</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">rock</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+           
+
+            <div class="jumbotron">
+                <h1 class="display-4">My Faviourite Beats</h1>
+                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                <hr class="my-4">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam tempore velit non? Beatae laudantium fuga, similique fugit illum facilis eaque tempora necessitatibus libero dolorum atque hic, quo repudiandae molestias ratione?</p>
+              
+              </div>
+             
+          
+      
+        
+              <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+                <span class="badge badge-danger">Genre</span>
+             
+              <img
+                src="https://miro.medium.com/max/307/1*EA3GJHcf_cXZbjfYo7GmwQ.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <h4>music</h4>
+            </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+            <span class="badge badge-info">Genre</span>
+            <img
+              src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg?ts=1561488440"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+              <span class="badge badge-info">Genre</span>
+           
+            <img
+              src="https://miro.medium.com/max/307/1*EA3GJHcf_cXZbjfYo7GmwQ.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+              <span class="badge badge-info">Genre</span>
+            <img
+              src="https://blog.dozmia.com/content/images/2019/01/Portrait-The-Weeknd.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          
+         
+          
+    
+          <div class="cardcontainer2 "style="display:block;justify-content:center;">
+        
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+              <span class="badge badge-info">Genre</span>
+            <img
+              src="https://www.rockbywild.it/wp-content/uploads/2021/01/whitesnake_the_blues_album.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+              <span class="badge badge-info">Genre</span>
+            <img
+              src="https://i.pinimg.com/236x/ef/2a/f6/ef2af6b5c43cc3b730d845ca6e2ebf82.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+              <span class="badge badge-info">Genre</span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxYgkT3p7JiPNiE15OAx5g1LTgTX8yPAZ9zw&usqp=CAU"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h4>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 card grow">
+            <span class="badge badge-info">Genre</span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMkdSZFkyGa2MevzgemKsdHPqNvL5kRwDsw&usqp=CAU"
+              class="card-img-top"
+              alt="..."
+            />
+            <h4>music</h5>
+          </div>
+        
+         
+        </div>
+        <div class="container mt-5">
+
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#No</th>
+                    <th scope="col">Track title</th>
+                    <th scope="col"> Track duration</th>
+                    <th scope="col"></th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Track Title </td>
+                    <td>4:12</td>
+                    <td><input class="track-btn " type="button" value="Delete"></td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Track Title </td>
+                    <td>3.54</td>
+                   <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Track Title </td>
+                    <td>4:12</td>
+                   <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Track Title </td>
+                    <td>3.54</td>
+                    <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Track Title </td>
+                    <td>4:12</td>
+                  <td><input class="track-btn "  type="button" value="Delete"></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Track Title </td>
+                    <td>4:39</td>
+                   <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Track Title </td>
+                    <td>3.54</td>
+                    <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Track Title </td>
+                    <td>4:12</td>
+                    <td><input class="track-btn "  type="button" value="Delete"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="btn-container">
+
+            <input type="button" value="Add track">
+        </div>
+        <section id="best-album-ever">
+            <div class="container py-5">
+              <div class="row">
+                <div class="col-12 col-md-4 grow">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMkdSZFkyGa2MevzgemKsdHPqNvL5kRwDsw&usqp=CAU"
+                    alt=""
+                  />
+                </div>
+                <div class="col-12 col-md-8">
+                  <div class="d-flex flex-column justify-content-center h-100">
+                    <h4>My Most Faviourite Album</h4>
+                    <div>
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                      enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                      nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                      sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <br>
+          <hr>
+          <br>
+          <section id="worst album" style="margin-left: 50px; margin:0 auto">
+            
+    
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="text-center">Worst Album List</h1>
+                </div>
+                <div class="card grow">
+                  <img
+                    src="https://exclaim.ca/images/29_wac.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card grow">
+                  <img
+                    src="https://exclaim.ca/images/29_wac.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card grow">
+                  <img
+                    src="https://exclaim.ca/images/29_wac.jpg"
+                    alt="..."
+                  />
+                </div>
+                <div class="card grow">
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+    
+         
+          <section id="tapestry">
+            <div class="container">
+              <div class="row py-5 mx-50">
+                <div class="col-12">
+                  <h1 class="text-center">Tapestry</h1>
+                </div>
+      
+                <div class="col-12 Album">
+                  <img
+                    src="https://exclaim.ca/images/29_wac.jpg"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndSvFQT3ylBDcYgew4eTfdJLUi-NA26vyQA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfp-vAUSkOXD4Dwr_M1JL-dlE25cYMDRF4uA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYB-l8QwNWhzPorb_s-XzTXfnYzyi5k90yw&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEu0jHFnd7lnFL2gmMPGf7ks9PGiY3ACrqtA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://exclaim.ca/images/29_wac.jpg"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://miro.medium.com/max/681/1*EBOL4lka5QjcYoxj6AHp-g.png"
+                    class="img-fluid squared"
+                  />
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLFnmIdPxNSuK4erz12GmKEO_BfZrp-fvXzA&usqp=CAU"
+                    class="img-fluid squared"
+                  />
+                
+                
+                </div>
+              </div>
+            </div>
+          </section>
+    
+       
+          
+        </div>
+    <div class="footer container justify-content-center d-flex">
+        <footer>
+            <p><i class="fab fa-facebook-f"></i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEUAAAD///+xsbHn5+elpaX39/f8/PxRUVHj4+PPz8+dnZ3ExMQkJCSYmJiurq7IyMjt7e0wMDBoaGiPj4/d3d1NTU22trYdHR28vLxaWlpUVFQ+Pj5HR0fV1dUTExN5eXk3NzeCgoKAgICILkFsAAAE9ElEQVR4nO3d61baQBSGYQ4hAooioCKI1t7/RZaEgEmYmX2gce+s9b0/+qea+pQcSGYYBwOEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEVK0W2eOILMvorzn2mC1W1qBGD4vpkFW+5H1d2XT+YA2ren7l/syTsQBY9PpsjSta550Bjy/62po3GDyxf1oF8NiTse+NeQCqgcPh5tNU2D0wX24sgbfvovlsO/9ave/u2r18nb5gmlvuqOsbgYdF4lx5V/4HlDuJ2enm+aazaD7aJ7e+K75mXP4TudVF46br4P0fYuu7C/B4XfwNznUPtwC/yc3vymOwyubdzUIPzN/pze+GtRP1ontOIOaVIvQKMoCDu2XtMJ92rgmlB9K76LGXxrd0jQm1UgMPrO3vGt9jcTPFOgyD18H0VeJcU2hxIGZa4D1v+01h1i0m2KMSyDrNDNrCx24xwUZK4JK5/aZw1KklHCmMvNnmvhr+hbG7iS/m9t0Lo/eDb8ztexdGgTl3+x++hfE7+sgd+349ui86/Vk0cy1MPLIIXw2/q7+Nfp8zYeqZTPBHrW7E8mn0ntqXMPnQKfjm5PQO8HLD612YfqoWFG4poCsh8dgwKDwUfxPfRX0JqeeiQeHm/FStB0LywW9QOE3vop6E9JPtiJAAuhEyHt2HhRTQi5AzNhEUzshv8yFkDb4EhfQ3uhDyRpd6LGQOn/VXyB0fDArpCQz2QgI4nlUdgk+Dt7PrDr6E1CuoeNzZfOZtLSR30bl8+83hV2MhfQwqhFtHQsZJRiF0dBxyzqIK4cSNkHWZkAtbI8yGQt51UC5sDd7ZCZkXerlw7kTIfScjFzZPpWZC9lQuubC1ZSMhf66aXNjagI1QMBlPLNx7EOaC2YZi4V8HwkwyZ1ssbJ1KbYQCoPzeoj2v0/reguyQnQvOU1hkreaT1gbcCy8tlff4FrNNNMLjyUn3nCb8H9NxGuE01wnHeT/20nLwRSMcT/pxHJ4GXxTCI7AXwmp0SS4sgL0QVgOgYmEJ7IHwMgAqFZ6A/oU/A6BCYQX0L/wZo5cJz0DvwvoYvUh4AToXNsboJcIfoG9hcxKCQFgD+hY258nwhXWgZ2F7ngxb2AA6Fl7Nk+EKx36e6suAXGEL6Fd4PVeNJ2wDvQpDc9VYwiugU2FwrhpHeA10KgxOp2QIA0CXwsh0SloYAnoUxqZTksIg0KEwOl+UEoaBDoXRKc2EMAJ0J0xMaU4LY0BvwtSU5qQwCnQmTM7ZTgnjQF/CxCdf0sIE0JUwDUwIU0BPQupjBVFhEuhJmH4F48I00I+Q+ORLXEgA3QipXTQqXBJAL0IGMPJ5CwroRUgdg1EhvUyKhfBqTQX6GIwK6Zk5FmsqtGebcHZRvdBiHL+9tglnF9ULLdY2aU5x5e2ieqHJYp8NIG8X1Qt/G1dWe9X4QKXQZp2o2uQ65jGoFyrm+v+HLrPp2cegXmi0Gm215p5gF9UKjdbcq9ZNlAFVQrN1E08fvhIcg1qh4VK7T7JjsOj147Q+6UdtrdJ9eval6UK7m6XsFbwkmEJtc6U497nRAakb3jqQu+xSV/EX2tUBrdeCHkjW81YAPaznLVmTXQz0sSb7QLCufhn35ORnXf1TvN+NwPz1CO5+NwJCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBDqUf8AwVc8J6gAD+YAAAAASUVORK5CYII=" alt=""style="width:50px;height:50px;"></p>
+            <p><i class="fab fa-facebook-f"></i></p>
+           
+            
+            
+        </footer>
+    </div>
+</body>
+
+</html>

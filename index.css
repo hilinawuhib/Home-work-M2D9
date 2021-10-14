@@ -1,0 +1,88 @@
+.card{
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: transparent;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 50px;
+    
+  }
+  img {
+    height: 200px;
+    width: 200px;
+    background: transparent;
+  }
+
+  .nav {
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-family: "Open Sans", sans-serif;
+    float: none;
+    justify-content: center;
+    background-color: rgb(23, 2, 56);
+  }
+  body {
+    background-color: black;
+    font-family: "Open Sans", sans-serif;
+  }
+  h4,
+  h1.h3 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+  }
+  p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+  }
+  .img-fluid{
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+}
+.grow:hover {
+    transform: scale(1.1);
+}
+.cardcontainer{
+    justify-content: center;
+}
+.grow{
+    width: 200px;
+    height: 200px;
+}
+h5{
+    font-size: 10px;
+}
+.jumbotron{
+    color: blanchedalmond;
+    height: 450px;
+    background-color: rgb(83, 77, 77);
+    text-align: left;
+    background-image: url("https://freerangestock.com/sample/52243/digital-music-beats-background-shows-music-soundtrack-or-sound-p.jpg");
+}
+h4{
+    font-size: small;
+}
+.badge{
+    position:absolute;
+    background-color: rgb(156, 98, 77) !important;
+    color: black;
+    font-size: small;
+ 
+}
+.table{
+    background-color: transparent;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+th,td,tr{
+    color: rgb(238, 234, 226);
+    border-color: rgb(54, 46, 46);
+}
+.track-btn{
+    background-color: black;
+    color: blanchedalmond;
+}
